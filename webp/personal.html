@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="../resources/img/SHS logo.png" type="image/x-icon" />
+    <title>PERSONAL LIFE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        font-family: "Rubik", sans-serif;
+      }
+      :root {
+        --bg-color: #191919;
+        --main-color: #2d4263;
+        --sec-color: #c84b31;
+        --txt-color: #ecdbba;
+      }
+      html {
+        scroll-behavior: smooth;
+        min-height: 100vh;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        background: var(--bg-color);
+        color: var(--txt-color);
+      }
+      .header-bar {
+        margin: 1%;
+        display: flex;
+        justify-content: center;
+        background: rgba(25, 25, 25, 0.8);
+        border-radius: 40px;
+        padding: 20px;
+      }
+      #logo {
+        width: auto;
+        height: 140px;
+      }
+      #ptxt {
+        width: 40%;
+        height: auto;
+      }
+      .center-s {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .separator {
+        height: 10px;
+        width: 95%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: var(--sec-color);
+        border-radius: 5px;
+      }
+      .dark-mode {
+        display: flex;
+        justify-content: right;
+        margin-right: 7vmin;
+      }
+      .bx {
+        position: absolute;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: #393939;
+        border-radius: 50%;
+        padding: 4px;
+        transition: 0.5s ease;
+      }
+      .bx:hover {
+        background-color: #5d5d5d;
+      }
+      .body-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5%;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #p-content {
+        font-family: Tahoma, sans-serif;
+        text-align: justify;
+        font-size: 4.5vmin;
+        margin-left: 6%;
+        text-indent: 60px;
+        line-height: 1.8;
+      }
+      h1 {
+        color: var(--txt-color);
+        margin: 0;
+        font-size: 5vmin;
+        text-align: center;
+      }
+      #t-pic {
+        margin-top: 5%;
+        width: 250px;
+        background-color: var(--bg-color);
+        border: 5px solid var(--sec-color);
+        border-radius: 50%;
+      }
+      .vid {
+        margin: 6% 0;
+      }
+      .second-body {
+        display: flex;
+        flex-direction: column;
+        margin: 0% 5%;
+        margin-bottom: 12%;
+      }
+      h3 {
+        margin: 0;
+        font-family: Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 4.5vmin;
+      }
+      #head3 {
+        margin: 0;
+        color: var(--sec-color);
+        font-family: Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 4.5vmin;
+      }
+      ol {
+        margin: 0;
+		margin-bottom: 5%;
+      }
+      #list-items {
+        font-family: Tahoma, sans-serif;
+        font-size: 3.5vmin;
+      }
+      span {
+        font-size: 3.5vmin;
+      }
+      #list-items-bottom {
+        font-family: Tahoma, sans-serif;
+        font-size: 4vmin;
+        text-align: justify;
+        margin: 0;
+        margin-bottom: 8%;
+      }
+      .elinks {
+        display: flex;
+        flex-direction: column;
+      }
+      .exlinks {
+        text-indent: 50px;
+        color: #5d5d5d;
+        text-decoration: none;
+        font-size: 2.5vmin;
+        margin: 5px;
+        transition: all ease 0.5s;
+      }
+      .exlinks:hover {
+        color: var(--sec-color);
+      }
+      footer {
+        box-shadow: 0px -5px 60px 1px var(--txt-color);
+        background: var(--bg-color);
+        color: var(--txt-color);
+        bottom: 0;
+        width: 100%;
+      }
+      .foot-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 1%;
+        margin-bottom: 3%;
+      }
+      .foot-title {
+        width: 30%;
+      }
+      #foot-name {
+        margin-bottom: 2px;
+        color: var(--sec-color);
+        font-size: 30px;
+      }
+      #foot-p {
+        font-family: Tahoma, sans-serif;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .quicklinks ul li {
+        margin-bottom: 3%;
+      }
+      .quicklinks ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: all ease 0.5s;
+      }
+      .quicklinks ul li a:hover {
+        color: var(--sec-color);
+      }
+
+      @media (max-width: 1080px) {
+        #logo {
+          width: auto;
+          height: 140px;
+        }
+        #ptxt {
+          width: 50%;
+          height: auto;
+        }
+        .body-content {
+          display: flex;
+          flex-direction: column;
+        }
+        #p-content {
+          margin: 0;
+        }
+        #t-pic {
+          margin-top: 1%;
+        }
+        .title {
+          margin-bottom: 3%;
+        }
+      }
+      @media (max-width: 720px) {
+        #logo {
+          width: auto;
+          height: 120px;
+        }
+        #ptxt {
+          width: 45%;
+          height: auto;
+        }
+        #t-pic {
+          width: 180px;
+        }
+        #iframe {
+          width: 300px;
+          height: 200px;
+        }
+        .second-body {
+          margin-bottom: 18%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #logo {
+          width: auto;
+          height: 75px;
+        }
+        #ptxt {
+          width: 65%;
+          height: auto;
+        }
+        #t-pic {
+          width: 120px;
+        }
+        #p-content {
+          text-indent: 20px;
+        }
+        #iframe {
+          width: 250px;
+          height: 150px;
+        }
+        .second-body {
+          margin-bottom: 24%;
+        }
+        .foot-title {
+          display: none;
+        }
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-bar">
+        <img id="logo" src="../resources/img/Ateneo logo.png" />
+        <img id="ptxt" src="../resources/img/ateneo txt.png" />
+        <img id="logo" src="../resources/img/SHS logo.png" />
+      </div>
+
+      <div class="center-s">
+        <div class="separator"></div>
+      </div>
+
+      <div class="dark-mode">
+        <i class="bx bx-sun" id="toggleDark"></i>
+      </div>
+    </header>
+    <div class="body-content">
+      <aside>
+        <div class="title">
+          <img id="t-pic" src="../resources/img/personal life.png" />
+          <h1>PERSONAL LIFE</h1>
+        </div>
+      </aside>
+      <section>
+        <p id="p-content">
+          What's the point of having good grades when you are mentally and
+          physically drained? A school is a place where you enhance your skills
+          and knowledge. It is also a place where you may feel comfortable, but
+          sometimes otherwise. As you venture to Senior High School, it will be
+          an overwhelming site to see and feel. Thus, this website will give you
+          tips on how to survive in STEM Strand regarding your personal life.
+        </p>
+      </section>
+    </div>
+
+    <div class="vid">
+      <iframe
+        id="iframe"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/R7iN71uJcG0"
+        title="YouTube video player"
+        frameborder="1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <section>
+      <div class="second-body">
+        <h3 id="head3">
+          Everyone can achieve in these fields if they have the appropriate
+          methods and mentality. Here are some sustenance guidelines for your
+          personal life:
+        </h3>
+        <ol>
+          <li>
+            <p id="list-items">
+               To always remind yourself to have a good balance between yourself,
+              academics, relationships, and pleasure. Always put yourself as
+              your top priority, especially your health. Then academics comes
+              next, along with significant relationships and pleasure.
+            </p>
+          </li>
+          <li>
+            <p id="list-items">
+               Remind yourself to take a break when you feel tired and get back
+              up stronger once fully recovered. As mentioned earlier, your
+              health is your top priority. Thus, taking a break is an essential
+              part of recovering and stabilizing your mental and physical
+              health.
+            </p>
+          </li>
+          <li>
+            <p id="list-items">
+               And most importantly, to have fun. Enjoy and savor every moment of
+              your Senior High School because this will serve as a significant
+              memory as you grow older and experience the true meaning of life.
+            </p>
+          </li>
+        </ol>
+
+        <div class="elinks">
+          <h3>External Links:</h3>
+          <ul>
+            <li>
+              <a
+                class="exlinks"
+                href="https://www.indeed.com/career-advice/career-development/tips-to-become-successful"
+                target="_blank"
+              >
+			  Tips To Becoming Successful and Achieving Your Life Goals</a
+              >
+            </li>
+            <li>
+              <a
+                class="exlinks"
+                href="https://www.westernunion.com/blog/en/6-tips-balancing-work-life-personal-life/"
+                target="_blank"
+              >
+			  Tips On Balancing Your Work Life And Your Personal Life</a
+              >
+            </li>
+			<li>
+				<a
+				  class="exlinks"
+				  href="https://www.betterup.com/blog/success-tips?hs_amp=true"
+				  target="_blank"
+				>
+				Success Tips to Accomplish Your Goals And Define Your Own Path</a
+				>
+			  </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="foot-content">
+        <div class="foot-title">
+          <h2 id="foot-name">How to Survive STEM</h2>
+          <p id="foot-p">
+            By developing strong foundations, building a network, <br />
+            seeking out resources, and prioritizing self-care, <br />
+            anyone can succeed in STEM. Keep learning, stay <br />
+            motivated, and enjoy the journey.
+          </p>
+        </div>
+
+        <div class="quicklinks">
+          <h2 id="foot-name">QUICK LINKS</h2>
+          <ul>
+            <li><a href="../index.html"> Home</a></li>
+            <li><a href="./acad.html"> Academics</a></li>
+            <li><a href="./extraACT.html"> Extra-curricular Activities</a></li>
+            <li><a href="./social.html"> Social Life</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JScript -->
+    <script>
+      const toggle = document.getElementById("toggleDark");
+      const body = document.querySelector("body");
+      const h1 = document.querySelector("h1");
+      const footer = document.querySelector("footer");
+
+      toggle.addEventListener("click", function () {
+        this.classList.toggle("bx-sun");
+        if (this.classList.toggle("bx-moon")) {
+          body.style.background = "#ECDBBA";
+          body.style.color = "#191919";
+          h1.style.color = "#2D4263";
+          footer.style.background = "#191919";
+          body.style.transition = "2s";
+          h1.style.transition = "2s";
+          footer.style.transition = "2s";
+        } else {
+          body.style.background = "#191919";
+          body.style.color = "#ECDBBA";
+          h1.style.color = "#ECDBBA";
+          footer.style.background = "#2D4263";
+          body.style.transition = "2s";
+          h1.style.transition = "2s";
+          footer.style.transition = "2s";
+        }
+      });
+    </script>
+  </body>
+</html>

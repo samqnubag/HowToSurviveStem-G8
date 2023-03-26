@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="../resources/img/SHS logo.png" type="image/x-icon" />
+    <title>SOCIAL LIFE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        font-family: "Rubik", sans-serif;
+      }
+      :root {
+        --bg-color: #191919;
+        --main-color: #2d4263;
+        --sec-color: #c84b31;
+        --txt-color: #ecdbba;
+      }
+      html {
+        scroll-behavior: smooth;
+        min-height: 100vh;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        background: var(--bg-color);
+        color: var(--txt-color);
+      }
+      .header-bar {
+        margin: 1%;
+        display: flex;
+        justify-content: center;
+        background: rgba(25, 25, 25, 0.8);
+        border-radius: 40px;
+        padding: 20px;
+      }
+      #logo {
+        width: auto;
+        height: 140px;
+      }
+      #ptxt {
+        width: 40%;
+        height: auto;
+      }
+      .center-s {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .separator {
+        height: 10px;
+        width: 95%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: var(--sec-color);
+        border-radius: 5px;
+      }
+      .dark-mode {
+        display: flex;
+        justify-content: right;
+        margin-right: 7vmin;
+      }
+      .bx {
+        position: absolute;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: #393939;
+        border-radius: 50%;
+        padding: 4px;
+        transition: 0.5s ease;
+      }
+      .bx:hover {
+        background-color: #5d5d5d;
+      }
+      .body-content {
+        display: flex;
+        margin: 0 5%;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #p-content {
+        font-family: Tahoma, sans-serif;
+        text-align: justify;
+        font-size: 3.5vmin;
+        margin-left: 6%;
+        text-indent: 60px;
+        line-height: 1.8;
+      }
+      h1 {
+        color: var(--txt-color);
+        margin: 0;
+        font-size: 5vmin;
+        text-align: center;
+      }
+      #t-pic {
+        margin-top: 30%;
+        width: 250px;
+        background-color: var(--bg-color);
+        border: 5px solid var(--sec-color);
+        border-radius: 50%;
+      }
+      .vid {
+        margin: 6% 0;
+      }
+      .second-body {
+        display: flex;
+        flex-direction: column;
+        margin: 0% 5%;
+        margin-bottom: 12%;
+      }
+      h3 {
+        margin: 0;
+        font-family: Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 4.5vmin;
+      }
+      #head3 {
+        margin: 0;
+        color: var(--sec-color);
+        font-family: Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 4.5vmin;
+      }
+      ul {
+        margin: 0;
+		margin-bottom: 5%;
+      }
+      #list-items {
+        font-family: Tahoma, sans-serif;
+        font-size: 3.5vmin;
+      }
+      span {
+        font-size: 3.5vmin;
+      }
+      #list-items-bottom {
+        font-family: Tahoma, sans-serif;
+        font-size: 4vmin;
+        text-align: justify;
+        margin: 0;
+        margin-bottom: 8%;
+      }
+      .elinks {
+        display: flex;
+        flex-direction: column;
+      }
+      .exlinks {
+        text-indent: 50px;
+        color: #5d5d5d;
+        text-decoration: none;
+        font-size: 2.5vmin;
+        margin: 5px;
+        transition: all ease 0.5s;
+      }
+      .exlinks:hover {
+        color: var(--sec-color);
+      }
+      footer {
+        box-shadow: 0px -5px 60px 1px var(--txt-color);
+        background: var(--bg-color);
+        color: var(--txt-color);
+        bottom: 0;
+        width: 100%;
+      }
+      .foot-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 1%;
+        margin-bottom: 3%;
+      }
+      .foot-title {
+        width: 30%;
+      }
+      #foot-name {
+        margin-bottom: 2px;
+        color: var(--sec-color);
+        font-size: 30px;
+      }
+      #foot-p {
+        font-family: Tahoma, sans-serif;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .quicklinks ul li {
+        margin-bottom: 3%;
+      }
+      .quicklinks ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: all ease 0.5s;
+      }
+      .quicklinks ul li a:hover {
+        color: var(--sec-color);
+      }
+
+      @media (max-width: 1080px) {
+        #logo {
+          width: auto;
+          height: 140px;
+        }
+        #ptxt {
+          width: 50%;
+          height: auto;
+        }
+        .body-content {
+          display: flex;
+          flex-direction: column;
+        }
+        #p-content {
+          margin: 0;
+        }
+        #t-pic {
+          margin-top: 1%;
+        }
+        .title {
+          margin-bottom: 3%;
+        }
+      }
+      @media (max-width: 720px) {
+        #logo {
+          width: auto;
+          height: 120px;
+        }
+        #ptxt {
+          width: 45%;
+          height: auto;
+        }
+        #t-pic {
+          width: 180px;
+        }
+        #iframe {
+          width: 300px;
+          height: 200px;
+        }
+        .second-body {
+          margin-bottom: 18%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #logo {
+          width: auto;
+          height: 75px;
+        }
+        #ptxt {
+          width: 65%;
+          height: auto;
+        }
+        #t-pic {
+          width: 120px;
+        }
+        #p-content {
+          text-indent: 20px;
+        }
+        #iframe {
+          width: 250px;
+          height: 150px;
+        }
+        .second-body {
+          margin-bottom: 24%;
+        }
+        .foot-title {
+          display: none;
+        }
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-bar">
+        <img id="logo" src="../resources/img/Ateneo logo.png" />
+        <img id="ptxt" src="../resources/img/ateneo txt.png" />
+        <img id="logo" src="../resources/img/SHS logo.png" />
+      </div>
+
+      <div class="center-s">
+        <div class="separator"></div>
+      </div>
+
+      <div class="dark-mode">
+        <i class="bx bx-sun" id="toggleDark"></i>
+      </div>
+    </header>
+    <div class="body-content">
+      <aside>
+        <div class="title">
+          <img id="t-pic" src="../resources/img/social life.png" />
+          <h1>SOCIAL LIFE</h1>
+        </div>
+      </aside>
+      <section>
+        <p id="p-content">
+          An ample amount of exposure to social interactions and experiences
+          helps students have better mental health overall. Surviving in the
+          STEM field is a challenge that one person cannot face alone. There
+          were some students who dropped out due to a lack of support for their
+          emotional and mental health, which is mostly fostered by social
+          interactions among significant others. Emotional support is a vital
+          need in the inevitable draining situations that a student encounters
+          in school. Being around others allows students to fully function as
+          children, teenagers, and adults, which molds their character as they
+          are exposed to various perspectives from peers who might have a
+          different worldview from theirs. Significant others serve as a
+          motivator for them to keep going while also being a shoulder for them
+          to lean on when things go tough. Building interpersonal skills is
+          beneficial for the development of students' well-being and success in
+          the future, as it boosts their confidence and helps them improve their
+          emotional and mental well-being.
+        </p>
+      </section>
+    </div>
+
+    <div class="vid">
+      <iframe
+        id="iframe"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/GXdVPLj_pIk"
+        title="YouTube video player"
+        frameborder="1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <section>
+      <div class="second-body">
+        <h3 id="head3">
+          Surrounding Yourself with the Right People: A Guide to Choosing the
+          Perfect Buddy
+        </h3>
+        <ul>
+          <li>
+            <p id="list-items">
+              <span>
+                Overcome your shyness and do not hesitate to be more active in
+                socializing.
+              </span>
+              <br />
+              Do not limit yourself to having casual and fun interactions with
+              the people around you. You can participate in school activities
+              that involve teamwork to help you meet new people, build
+              relationships, and develop your interpersonal skills.
+            </p>
+          </li>
+          <li>
+            <p id="list-items">
+              <span> Become the buddy you want to have. </span> <br />
+              Each of you needs a support system throughout this stage of your
+              life. Just as they shed light on your life, so should you. As the
+              proverb says: “Do unto others what you would have others do unto
+              you".
+            </p>
+          </li>
+          <li>
+            <p id="list-items">
+              <span> Choose the perfect company for yourself. </span> <br />
+              One of the essential requirements at this stage of your life is
+              being around the right people who inspire you to be more and
+              better. Be amongst people who give you more inner strength and
+              provide you solace during your gloomy moments.
+            </p>
+          </li>
+        </ul>
+
+        <div class="elinks">
+          <h3>External Links:</h3>
+          <ul>
+            <li>
+              <a
+                class="exlinks"
+                href="https://academy.snapask.com/en-sg/post/balancing-school-work-social-life-d809ae1b9e77"
+                target="_blank"
+              >
+                Tips On Balancing School Work And Having A Social Life</a
+              >
+            </li>
+            <li>
+              <a
+                class="exlinks"
+                href="https://www.k12.com/parent-student-resources/school-safety/socialization.html"
+                target="_blank"
+              >
+                Why is socializing important for students?</a
+              >
+            </li>
+            <li>
+              <a
+                class="exlinks"
+                href="https://www.pbs.org/wgbh/nova/article/the-science-of-smart-how-your-social-life-in-high-school-affects-you-today/"
+                target="_blank"
+              >
+                The Science of Smart: How Your Social Life in High School
+                Affects You Today</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="foot-content">
+        <div class="foot-title">
+          <h2 id="foot-name">How to Survive STEM</h2>
+          <p id="foot-p">
+            By developing strong foundations, building a network, <br />
+            seeking out resources, and prioritizing self-care, <br />
+            anyone can succeed in STEM. Keep learning, stay <br />
+            motivated, and enjoy the journey.
+          </p>
+        </div>
+
+        <div class="quicklinks">
+          <h2 id="foot-name">QUICK LINKS</h2>
+          <ul>
+            <li><a href="../index.html"> Home</a></li>
+            <li><a href="./acad.html"> Academics</a></li>
+            <li><a href="./extraACT.html"> Extra-curricular Activities</a></li>
+            <li><a href="./personal.html"> Personal Life</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JScript -->
+    <script>
+      const toggle = document.getElementById("toggleDark");
+      const body = document.querySelector("body");
+      const h1 = document.querySelector("h1");
+      const footer = document.querySelector("footer");
+
+      toggle.addEventListener("click", function () {
+        this.classList.toggle("bx-sun");
+        if (this.classList.toggle("bx-moon")) {
+          body.style.background = "#ECDBBA";
+          body.style.color = "#191919";
+          h1.style.color = "#2D4263";
+          footer.style.background = "#191919";
+          body.style.transition = "2s";
+          h1.style.transition = "2s";
+          footer.style.transition = "2s";
+        } else {
+          body.style.background = "#191919";
+          body.style.color = "#ECDBBA";
+          h1.style.color = "#ECDBBA";
+          footer.style.background = "#2D4263";
+          body.style.transition = "2s";
+          h1.style.transition = "2s";
+          footer.style.transition = "2s";
+        }
+      });
+    </script>
+  </body>
+</html>

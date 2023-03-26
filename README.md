@@ -1,1 +1,1 @@
-# HowToSurviveStem-G8
+# HowToSurviveSTEM
